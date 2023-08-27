@@ -15,4 +15,4 @@ http.createServer((req, res) => {
         }
     };
     req.pipe(request(options)).pipe(res);
-}).listen(process.env['HTTP_PORT'] || 8080);
+}).listen(process.env['HTTP_PORT'] || 8080, '127.0.0.1');
