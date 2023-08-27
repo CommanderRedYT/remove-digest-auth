@@ -1,0 +1,11 @@
+{
+  "name": "remove-digest-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
