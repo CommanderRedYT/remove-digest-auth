@@ -7,7 +7,7 @@ const HTTP_ADDRESS = process.env['HTTP_ADDRESS'] || '127.0.0.1';
 
 // http server that proxies requests to the proxy server and authenticates with digest auth
 
-console.log(`Proxying requests to ${proxy_for} on port ${HTTP_PORT}`);
+console.log(`Proxying requests to ${proxy_for} on port ${HTTP_ADDRESS}:${HTTP_PORT}`);
 
 http.createServer((req, res) => {
     const options = {
