@@ -3,6 +3,7 @@ import request from 'request';
 
 const proxy_for = process.env['PROXY_URL'];
 const HTTP_PORT = process.env['HTTP_PORT'] || 8080;
+const HTTP_ADDRESS = process.env['HTTP_ADDRESS'] || '127.0.0.1';
 
 // http server that proxies requests to the proxy server and authenticates with digest auth
 
@@ -18,4 +19,4 @@ http.createServer((req, res) => {
         }
     };
     req.pipe(request(options)).pipe(res);
-}).listen(HTTP_PORT, '127.0.0.1');
+}).listen(HTTP_PORT, HTTP_ADDRESS);
